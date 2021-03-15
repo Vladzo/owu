@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: antiquewhite;
+    font-size: 25px;
+}
+
+.content {
+    width: 1200px;
+    margin: auto;
+}
+.header {
+    background: #83fdd4;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.header > p {
+    font-style: italic;
+    font-family: Arial fantasy;
+    color: #cf9622;
+}
+
+.header > img {
+    border: 2px dashed #b24abe;
+}
+
+.main {
+    border-left: 4px dashed #e0ad13;
+    margin-top: 10px;
+    padding-left: 10px;
+    background: aliceblue;
+}
+
+.main h2 {
+    font-style: italic;
+}
+
+.footer {
+    font-style: italic;
+    border: 4px dashed #db3d3d;
+    margin: 10px;
+}
