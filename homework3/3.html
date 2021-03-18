@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex</title>
+    <style>
+        .father {
+            width: 900px;
+            background: #83fdd4;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        .block {
+            height: 250px;
+            text-align: center;
+        }
+        .block2 {
+            width: 85%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .block3 {
+            width: 33.333%;
+        }
+        .A {
+            background: #2c4fb7;
+            width: 100%;
+            height: 100px;
+        }
+        .B {
+            background: #18ac0d;
+
+        }
+        .C {
+            background: #db3d3d;
+
+        }
+        .D {
+            background: #e0ad13;
+        }
+        .E {
+            background: blueviolet;
+        }
+        .F {
+            background: darkgray;
+        }
+        .H {
+            background: bisque;
+            width: 15%;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="A block">A</div>
+    <div class="block2">
+        <div class="B block block3">B</div>
+        <div class="C block block3">C</div>
+        <div class="D block block3">D</div>
+        <div class="E block block3">E</div>
+        <div class="F block block3">F</div>
+        <div class="G block block3">G</div>
+    </div>
+    <div class="H" style="text-align: center">H</div>
+</div>
+</body>
+</html>
