@@ -3,12 +3,12 @@
 - з 5 числових значень
 - з 5 стічкових значень
 - з 5 значень стрічкового, числового та булевого типу */
-// const arr1 = [3, 5, 25, -32, 0];
-// const arr2 = ['owu', 'js', 'array', 'hello', 'buy'];
-// const arr3 = ['4', 'string', 25, -32, true];
-// console.log(arr1);
-// console.log(arr2);
-// console.log(arr3);
+const arr1 = [3, 5, 25, -32, 0];
+const arr2 = ['owu', 'js', 'array', 'hello', 'buy'];
+const arr3 = ['4', 'string', 25, -32, true];
+console.log(arr1);
+console.log(arr2);
+console.log(arr3);
 
 /* -- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль.
  */
@@ -136,33 +136,3 @@
 //     }
 // }
 
-/* Додатково
-- Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
-- Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
-- Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
-- Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово. */
-let arr1 = ['a', 'b', 'c'];
-let arr2 = ['a', 'b', 'c'];
-let arr3 = ['a', 'b', 'c'];
-
-let word1 = '', word2 = '', word3 = '';
-//////
-
-for (let i = 0; i < arr1.length; i++) {
-    word1 += arr1[i];
-}
-console.log(word1);
-
-/////
-let i = 0;
-while (i < arr2.length) {
-    word2 += arr2[i];
-    i++;
-}
-console.log(word2);
-///////
-
-for (let elem of arr3) {
-    word3 += elem;
-}
-console.log(word3);
