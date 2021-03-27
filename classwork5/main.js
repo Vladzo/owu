@@ -188,7 +188,9 @@
 // }
 
 //9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
-let arr = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
+//let arr = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
+
+
 // 1. перебрати його циклом while
 // let i = arr.length - 1;
 // while (i >= 0) {
@@ -237,3 +239,107 @@ let arr = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 //     }
 //     console.log(arr[i]);
 // }
+
+/* 1. Створити пустий масив та : */
+//let arr = [];
+
+// a. заповнити його 50 парними числами за допомоги циклу.
+// let i = 2;
+// while (arr.length < 50) {
+//     if (i % 2 === 0) {
+//         arr.push(i);
+//     }
+//     i++;
+// }
+// console.log(arr);
+
+//b. заповнити його 50 непарними числами за допомоги циклу.
+// let i = 1;
+// while (arr.length < 50) {
+//     if (i % 2 !== 0) {
+//         arr.push(i);
+//     }
+//     i++;
+// }
+// console.log(arr);
+
+//c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
+// for (let i = 0; i < 20; i++) {
+//     arr[i] = Math.floor(Math.random() * 100);
+// }
+// console.log(arr);
+
+//d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
+// for (let i = 0; i < 20; i++) {
+//     arr[i] = Math.floor(Math.random() * (732 - 8) + 8);
+// }
+// console.log(arr);
+
+//2. Вивести за допомогою console.log кожен третій елемен
+// let arr = [1, 5, true, false, 'string', 'owu', '15', 34, 50, 29];
+// for (let i = 0; i < arr.length; i += 3) {
+//     console.log(arr[i]);
+// }
+
+// 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
+// let arr = [1, 5, true, false, 'string', 'owu', '15', 34, 50, 29, 30, 20, 10, 14, 40, 50];
+// for (let i = 0; i < arr.length; i += 3) {
+//     if (typeof arr[i] === 'number' && arr[i] % 2 === 0) {
+//         console.log(arr[i]);
+//     }
+// }
+
+//4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
+// let arr = [1, 5, true, false, 'string', 'owu', '15', 34, 50, 29, 30, 20, 10, 14, 40, 50];
+// let newArr = [];
+// for (let i = 0; i < arr.length; i += 3) {
+//     if (typeof arr[i] === 'number' && arr[i] % 2 === 0) {
+//         console.log(arr[i]);
+//         newArr.push(arr[i]);
+//     }
+// }
+// console.log(newArr);
+
+//5. Вивести кожен елемент масиву, сусід справа якого є парним
+// let arr = [1, 5, true, false, 'string', 'owu', '15', 34, 50, 29, 30, 20, 10, 14, 40, 50];
+// let count = 1;
+// for (let i in arr) {
+//     if (typeof arr[count] === 'number' && arr[count] % 2 === 0) {
+//         console.log(arr[i]);
+//     }
+//     count++;
+// }
+
+// 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
+// let arr = [100,250,50,168,120,345,188];
+// let sum = 0;
+// for (let item of arr) {
+//     sum += item;
+// }
+// console.log(sum / arr.length);
+
+//7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
+// let arr = [];
+// for (let i = 0; i < 20; i++) {
+//     arr[i] = Math.floor(Math.random() * (50 - 10) + 10);
+// }
+// console.log(arr);
+//
+// let arr2 = [];
+// let temp = 0;
+// for (let item of arr) {
+//     temp = item * 5;
+//     arr2.push(temp);
+// }
+// console.log(arr2);
+
+// 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом -
+// додати його в інший масив.
+// let arr = [1, 5, true, false, 'string', 'owu', '15', 34, 50, 29, 30, 20, 10, 14, 40, 50];
+// let arr2 = [];
+// for (let item of arr) {
+//     if (typeof item === 'number') {
+//         arr2.push(item);
+//     }
+// }
+// console.log(arr2);
