@@ -73,6 +73,6 @@ function inSingleLevel(arr) {
         }
         arr2.push(item);
     }
-    return arr2
+    return arr2;
 }
 console.log(inSingleLevel(arr));
