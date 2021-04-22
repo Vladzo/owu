@@ -1,8 +1,8 @@
-function wakeUp (time, cb) {
+function wakeUp(time, cb) {
     setTimeout(() => {
         if (time < 100) {
             console.log("I'm wake up!");
-            cb(null, time+=100);
+            cb(null, time += 100);
             return;
         }
         cb('Too late for wake up');
@@ -17,7 +17,7 @@ function getUp(time, cb) {
             return;
         }
         cb('Too late for get up');
-    },2000)
+    }, 2000)
 }
 
 function goWork(money, cb) {
@@ -67,7 +67,7 @@ function goShopping(money, cb) {
 
 function sleep(isTired) {
     setTimeout(() => {
-        if(isTired) {
+        if (isTired) {
             console.log('Happy end');
         } else {
             console.log('Cant sleep')
@@ -77,37 +77,42 @@ function sleep(isTired) {
 
 
 wakeUp(50, (err, data) => {
-    if (!err) {
-        getUp(data, (err) => {
-          if (!err) {
-              goWork(false, (err) => {
-                  if (!err) {
-                      work(50, (err) => {
-                          if(!err) {
-                              goHome(true, (err) => {
-                                  if (!err) {
-                                      goShopping(500, (err) => {
-                                          if(!err) {
-                                              sleep(true, () => {
-
-                                              })
-                                          } else  console.error(err);
-                                      })
-                                  } else  console.error(err);
-                              })
-                          } else  console.error(err);
-                      })
-                  } else  console.error(err);
-              })
-          } else {
-              console.error(err);
-          }
-        })
-    } else {
+    if (err) {
         console.error(err);
+        return
     }
+    getUp(data, (err) => {
+        if (err) {
+            console.error(err);
+            return
+        }
+        goWork(false, (err) => {
+            if (err) {
+                console.error(err);
+                return
+            }
+            work(50, (err) => {
+                if (err) {
+                    console.error(err);
+                    return
+                }
+                goHome(true, (err) => {
+                    if (err) {
+                        console.error(err);
+                        return
+                    }
+                    goShopping(500, (err) => {
+                        if (err) {
+                            console.error(err);
+                            return
+                        }
+                        sleep(true)
+                    })
+                })
+            })
+        })
+    })
 })
-
 
 
 //Оголошення функцій для промісів і async
