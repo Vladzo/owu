@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 10</title>
+</head>
+<body>
+
+<script>
+    //Завдання від Віті по замиканнях (треба було створити User Builder)
+    function userBuilder() {
+        let login = 'user';
+        let age;
+        let password = 'root';
+        return {
+            getLogin() {
+                return login;
+            },
+            getAge() {
+                return age;
+            },
+            getPassword() {
+                return password;
+            },
+
+            setAge(newAge) {
+                if (newAge > age) {
+                    alert('Молодшати заборонено!');
+                }
+                age = newAge;
+            },
+            changePassword(inputLogin, currentPassword, newPassword) {
+                if (login !== inputLogin || currentPassword !== password || newPassword.length < 8) {
+                    console.error('Не вдалося змінити пароль')
+                    return;
+                }
+                if (newPassword.includes('@') || newPassword.includes('#') || newPassword.includes('&')) {
+                    password = newPassword;
+                    return;
+                }
+                console.error('No way!');
+            }
+        }
+    }
+
+    let newUser = userBuilder();
+    newUser.setAge(22);
+    console.log(newUser.getAge())
+    console.log(newUser.getPassword());
+    newUser.changePassword('user', 'root', 'newpassword#');
+    console.log(newUser.getPassword());
+
+</script>
+</body>
+</html>
