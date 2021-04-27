@@ -10,7 +10,7 @@
     //Завдання від Віті по замиканнях (треба було створити User Builder)
     function userBuilder() {
         let login = 'user';
-        let age;
+        let age = 18;
         let password = 'root';
         return {
             getLogin() {
@@ -24,7 +24,7 @@
             },
 
             setAge(newAge) {
-                if (newAge > age) {
+                if (newAge < age) {
                     alert('Молодшати заборонено!');
                 }
                 age = newAge;
@@ -46,7 +46,6 @@
     let newUser = userBuilder();
     newUser.setAge(22);
     console.log(newUser.getAge())
-    console.log(newUser.getPassword());
     newUser.changePassword('user', 'root', 'newpassword#');
     console.log(newUser.getPassword());
 
